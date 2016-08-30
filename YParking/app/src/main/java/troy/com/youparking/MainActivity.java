@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
         backgroundWorker.execute(type, email, password);
+
+        //AARONS TESTING GIT CONNECTION
     }
 
 }
