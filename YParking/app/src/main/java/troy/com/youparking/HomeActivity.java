@@ -12,4 +12,5 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     //heyyyyy
+    //automato
 }
