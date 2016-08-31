@@ -7,13 +7,12 @@ import java.sql.Timestamp;
  */
 public class User {
 
-    private String fName, lName;
+    private String fName, lName, email;
 
-    public User(String fName, String lName) {
+    public User(String fName, String lName, String email) {
         this.fName = fName;
         this.lName = lName;
-
-        printUser();
+        this.email = email;
     }
 
     public String getfName() {
@@ -24,8 +23,6 @@ public class User {
         return lName;
     }
 
-    private void printUser() {
-        System.out.println(fName + " " + lName);
-    }
+    public String getEmail() { return email; }
 
 }

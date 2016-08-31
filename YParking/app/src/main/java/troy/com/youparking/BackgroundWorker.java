@@ -3,6 +3,7 @@ package troy.com.youparking;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.support.annotation.MainThread;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -20,6 +21,7 @@ import java.net.URLEncoder;
  * Created by acous on 8/28/2016.
  */
 public class BackgroundWorker extends AsyncTask<String, Void, String> {
+    public AsyncResponse delegate = null;
 
     Context context;
     AlertDialog alertDialog;
@@ -72,6 +74,7 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
     protected void onPostExecute(String result) {
         alertDialog.setMessage(result);
         alertDialog.show();
+        delegate.processFinish(result);
     }
 
     @Override
