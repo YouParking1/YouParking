@@ -14,4 +14,5 @@
         completions."
     </string>
     <string name="title_activity_general_map">Map Location</string>
+    <string name="question_current_location">Is this your current location?</string>
 </resources>
