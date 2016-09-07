@@ -1,6 +1,7 @@
 package troy.com.youparking;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.support.annotation.NonNull;
@@ -124,5 +125,10 @@ public class GeneralMap extends FragmentActivity implements OnMapReadyCallback, 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
+    }
+
+    public void goToHold(View view) {
+        Intent intent = new Intent(this, HoldSpot.class);
+        startActivity(intent);
     }
 }
