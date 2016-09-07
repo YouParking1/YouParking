@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:actionBarSize"
+    android:id="@+id/icons"
+    android:background="#5C6BC0">
+
+    <TextView
+        android:id="@+id/view_actionbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="YouParking"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/view_actionbar_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_weight="1"
+        android:textSize="45sp"
+        android:text="@string/fa_ticket"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/numTickets"
+        android:textSize="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="35dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>
