@@ -17,7 +17,4 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, GeneralMap.class);
         startActivity(intent);
     }
-
-    //heyyyyy
-    //automato
 }
