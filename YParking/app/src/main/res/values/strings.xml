@@ -15,5 +15,25 @@
     </string>
     <string name="title_activity_general_map">Map Location</string>
     <string name="question_current_location">Is this your current location?</string>
+
+    <!-- String for ticket icon -->
     <string name="fa_ticket">&#xf1fe;</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="drawer_array">
+        <item>Home</item>
+        <item>Vehicles</item>
+        <item>My Bids</item>
+        <item>Find Now</item>
+        <item>Hold Now</item>
+        <item>Find Later</item>
+        <item>Hold Later</item>
+        <item>Sign Out</item>
+    </string-array>
+    <string name="title_activity_navigation_menu">NavigationMenu</string>
 </resources>

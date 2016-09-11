@@ -1,76 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    tools:context="troy.com.youparking.HomeActivity">
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <include layout="@layout/custom_actionbar"
-        android:id="@+id/include" />
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="#111" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Go to Map"
-        android:id="@+id/mapButton"
-        android:onClick="openMyMap"
-        android:layout_marginBottom="28dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/textView4"
-        android:layout_alignEnd="@+id/textView4"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignStart="@+id/textView4" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Welcome to YouParking"
-        android:id="@+id/textView2"
-        android:layout_marginTop="40dp"
-        android:textSize="30dp"
-        android:layout_below="@+id/include"
-        android:layout_centerHorizontal="true" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:context="troy.com.youparking.HomeActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Spots"
-        android:id="@+id/textView3"
-        android:layout_marginTop="30dp"
-        android:textSize="25dp"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true" />
+        <include layout="@layout/custom_actionbar"
+            android:id="@+id/include" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="0"
-        android:id="@+id/spotsAvailable"
-        android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp" />
+        <ImageView
+            android:id="@+id/profilePic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_profile_pic"
+            android:layout_marginTop="20dp"
+            android:maxWidth="42dp"
+            android:maxHeight="42dp"
+            android:scaleType="fitXY"
+            android:layout_below="@+id/include"
+            android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Not Complete Profile"
-        android:id="@+id/textView4"
-        android:layout_above="@+id/holdButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="37dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hold Spot"
-        android:id="@+id/holdButton"
-        android:onClick="openMyMap"
-        android:layout_marginBottom="70dp"
-        android:layout_above="@+id/mapButton"
-        android:layout_centerHorizontal="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go to Map"
+            android:id="@+id/mapButton"
+            android:onClick="openMyMap"
+            android:layout_marginBottom="28dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/textView2"
+            android:layout_alignEnd="@+id/textView2"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2" />
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Welcome to YouParking"
+            android:id="@+id/textView2"
+            android:textSize="30dp"
+            android:layout_below="@+id/profilePic"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Spots"
+            android:id="@+id/textView3"
+            android:layout_marginTop="30dp"
+            android:textSize="25dp"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0"
+            android:id="@+id/spotsAvailable"
+            android:layout_below="@+id/textView3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go to Navigation"
+            android:id="@+id/button"
+            android:layout_above="@+id/mapButton"
+            android:layout_marginBottom="46dp"
+            android:layout_alignLeft="@+id/mapButton"
+            android:layout_alignStart="@+id/mapButton"
+            android:layout_alignRight="@+id/mapButton"
+            android:layout_alignEnd="@+id/mapButton"
+            android:onClick="goToNav" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>
