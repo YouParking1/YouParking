@@ -161,8 +161,13 @@ public class GeneralMap extends FragmentActivity implements OnMapReadyCallback, 
     }
 
     public void goToHold(View view) {
-        Intent intent = new Intent(this, HoldSpot.class);
-        startActivity(intent);
+        if (myLat+myLong != 0) {
+            Intent intent = new Intent(this, HoldSpot.class);
+
+            intent.putExtra("mLat", myLat);
+            intent.putExtra("mLong", myLong);
+            startActivity(intent);
+        }
     }
 
     @Override
@@ -173,9 +178,9 @@ public class GeneralMap extends FragmentActivity implements OnMapReadyCallback, 
     private void handleNewLocation(Location location) {
         Log.d(TAG, location.toString());
 
-        double currentLatitude = location.getLatitude();
-        double currentLongtitude = location.getLongitude();
-        LatLng latlng = new LatLng(currentLatitude, currentLongtitude);
+        myLat = location.getLatitude();
+        myLong = location.getLongitude();
+        LatLng latlng = new LatLng(myLat, myLong);
 
         MarkerOptions options = new MarkerOptions()
                 .position(latlng)
