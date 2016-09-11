@@ -12,6 +12,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements AsyncResponse {
     EditText emailEt, passwordEt;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements AsyncResponse {
     @Override
     public void processFinish(String output) {
         if (output.contains("success")) {
+            User.email = emailEt.getText().toString();
             Intent intent = new Intent(this, HomeActivity.class);
             startActivity(intent);
         }
