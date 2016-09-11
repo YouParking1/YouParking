@@ -11,7 +11,7 @@
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -29,8 +29,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -46,8 +47,15 @@
         <activity
             android:name=".GeneralMap"
             android:label="@string/title_activity_general_map"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".HoldSpot"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".HoldSpot" />
+        <activity android:name=".NavigationMenu" />
+        <activity android:name=".VehiclesActivity" />
+        <activity android:name=".MyBidsActivity" />
+        <activity android:name=".FindNowActivity" />
+        <activity android:name=".FindLaterActivity" />
+        <activity android:name=".HoldLaterActivity" />
+        <activity android:name=".SignOutActivity" />
     </application>
 
 </manifest>
