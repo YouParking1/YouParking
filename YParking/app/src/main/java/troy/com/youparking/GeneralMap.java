@@ -114,6 +114,7 @@ public class GeneralMap extends FragmentActivity implements OnMapReadyCallback, 
                 handleNewLocation(mLastLocation);
         }
     }
+    //
 
     @Override
     protected void onStart() {

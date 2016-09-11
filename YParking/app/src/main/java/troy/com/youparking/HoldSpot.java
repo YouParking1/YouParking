@@ -19,4 +19,5 @@ public class HoldSpot extends AppCompatActivity {
             coords.setText(extras.getString("mLat") + " " + extras.getString("mLong"));
         }
     }
+    //
 }
