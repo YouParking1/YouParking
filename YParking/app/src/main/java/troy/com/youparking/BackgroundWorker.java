@@ -22,6 +22,7 @@ import java.net.URLEncoder;
  */
 public class BackgroundWorker extends AsyncTask<String, Void, String> {
     public AsyncResponse delegate = null;
+    private boolean showAlert = false;
 
     Context context;
     AlertDialog alertDialog;
@@ -32,9 +33,9 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
     @Override
     protected String doInBackground(String... params) {
         String type = params[0];
-
         if (type.equals("login"))  {
             String login_url = "http://www.troyparking.com/login.php";
+            showAlert = true;
             try {
                 String email = params[1];
                 String password = params[2];
@@ -121,9 +122,10 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        alertDialog.setMessage(result);
-        alertDialog.show();
-        delegate.processFinish(result);
+            alertDialog.setMessage(result);
+            alertDialog.show();
+            delegate.processFinish(result);
+
     }
 
     @Override

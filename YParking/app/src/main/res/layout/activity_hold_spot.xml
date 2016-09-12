@@ -24,6 +24,24 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="How many tickets for this spot?"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="5dp"/>
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:prompt="@string/points_prompt"
+            android:background="@android:drawable/btn_dropdown"
+            android:entries="@array/points_array"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+        </Spinner>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Add any additional comments that pertain to the spot.\nI.E. Faculty, Freshmen, Dorm Parking, etc..."
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
