@@ -45,4 +45,5 @@
         <item>Sign Out</item>
     </string-array>
     <string name="title_activity_navigation_menu">NavigationMenu</string>
+    <string name="title_activity_find_now">Map</string>
 </resources>
