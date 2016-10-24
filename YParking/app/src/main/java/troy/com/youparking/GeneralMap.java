@@ -178,7 +178,7 @@ public class GeneralMap extends FragmentActivity implements OnMapReadyCallback, 
     }
 
     private void handleNewLocation(Location location) {
-        Log.d(TAG, location.toString());
+        //Log.d(TAG, location.toString());
 
         myLat = location.getLatitude();
         myLong = location.getLongitude();
